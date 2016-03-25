@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+    <struts>
+		<package name="action" extends="struts-default" namespace="">
+			<action name="regist" class="action.RegistAction">
+				<result>/WEB-INF/content/welcome.jsp</result>
+			</action>
+			<action name="login" class="action.LoginAction">
+				<result>/WEB-INF/content/welcome_local.jsp</result>
+			</action>
+			<action name="login_global" class="action.LoginAction_global">
+				<result>/WEB-INF/content/welcome_global.jsp</result>
+			</action>
+			<action name="login_array" class="action.LoginAction_list">
+				<result>/WEB-INF/content/welcome_array.jsp</result>
+			</action>
+			<action name="regist_ongl" class="action.Regist_ongl_Action">
+				<result>/WEB-INF/content/welcome_ongl.jsp</result>
+			</action>
+			<action name="regist_map" class="action.Regist_map_Action">
+				<result>/WEB-INF/content/welcome_map.jsp</result>
+			</action>
+			<action name="regist_list" class="action.Regist_list_Action">
+				<result>/WEB-INF/content/welcome_list.jsp</result>
+			</action>
+			<action name="*">
+				<result>/WEB-INF/content/{1}.jsp</result>
+			</action>
+		</package>
+    </struts>
